@@ -1,14 +1,13 @@
 import matplotlib.pyplot as plt
 import os
 import functions
-import numpy as np
 
 
 def main():
     functions.set_rc_params()
 
     plot1 = PlotData("plot1")
-    plot1.set_data("data1", [0,1,2], [4,5,6])
+    plot1.set_data("data1", [0, 1, 2], [4, 5, 6])
     plot1.set_labels("XLabel", "YLabel")
     plot1.set_limits([0, 2], [0, 6])
 
@@ -57,8 +56,6 @@ class PlotData:
     def set_limits(self, x_limit, y_limit):
         self.x_limit = x_limit
         self.y_limit = y_limit
-
-
 
 
 if __name__ == '__main__':
