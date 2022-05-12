@@ -6,11 +6,20 @@ import functions
 def main():
     functions.set_rc_params()
 
-    plot1 = PlotData("css-apcma_sf7_lp")
-    plot1.set_data("BW:250kHz", list(range(1, 7)), [0, 0, 0, 0.005025538, 0.00568108, 0.009944424])
-    plot1.set_data("BW:1000kHz",  list(range(1, 7)), [0, 0, 0, 9.40E-05, 0.00123092, 0.00020896])
-    plot1.set_labels("Number of TX", "Loss Probability")
-    # plot1.set_limits([0, 2], [0, 6])
+    # plot1 = PlotData("css-apcma_sf7_lp")
+    # plot1.set_data("BW:250kHz", list(range(1, 7)), [0, 0, 0, 0.005025538, 0.00568108, 0.009944424])
+    # plot1.set_data("BW:1000kHz",  list(range(1, 7)), [0, 0, 0, 9.40E-05, 0.00123092, 0.00020896])
+    # plot1.set_labels("Number of TX", "Loss Probability")
+
+    plot1 = PlotData("css-apcma_sf7_mp")
+    plot1.set_data("BW:250kHz", list(range(1, 7)), [0, 0.000373878, 0.006335054, 0.034897312, 0.058296079, 0.076776499])
+    plot1.set_data("BW:1000kHz",  list(range(1, 7)), [0, 0.000435974, 0.00066313, 0.006583393, 0.007315115, 0.008506859])
+    plot1.set_labels("Number of TX", "Misdetection Probability")
+
+    # plot1 = PlotData("lora_sf7_lp")
+    # plot1.set_data("BW:250kHz", list(range(1, 7)), [0.008, 0.0085, 0.005, 0.0035, 0.0566, 0.1241])
+    # plot1.set_data("BW:1000kHz", list(range(1, 7)), [0.001, 0.0025, 0.3063, 0.0695, 0.0036, 0.2151])
+    # plot1.set_labels("Number of TX", "Loss Probability")
 
     fig1 = plt.figure(figsize=(6, 4))
     ax1 = fig1.add_subplot(111)
@@ -22,7 +31,7 @@ def main():
     ax1.set_xlim(plot1.x_limit)
     ax1.set_ylim(plot1.y_limit)
     # ax1.semilogy()
-    ax1.legend(bbox_to_anchor=(1, 0.95), loc='upper right', borderaxespad=0.5, fontsize=18)
+    ax1.legend(bbox_to_anchor=(0, 0.8), loc='upper left', borderaxespad=0.5, fontsize=18)
     fig1.tight_layout()
 
     plt.show()
