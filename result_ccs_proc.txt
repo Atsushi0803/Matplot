@@ -1,0 +1,29 @@
+
+
+    # plot1 = PlotData("bw1000k_sf7_tp")
+    # plot1.set_data("LoRa", [6, 60, 120, 180, 240], [2.385139319, 2.296800826, 1.73126935, 1.605374613, 1.309391125])
+    # plot1.set_data("CSS-APCMA", [5, 60, 120, 180, 240], [2.417794971, 2.412093479, 2.341633332, 2.276368285, 2.206179933])
+    # plot1.set_labels(r'仮想送信台数$N_v$', "Throughput per Device[bps]")
+    # plot1.markers = ["o", "x"]
+    # plot1.colors = ["tab:orange", "tab:blue"]
+
+    plot1 = PlotData("bw1000k_sf7_per")
+    plot1.set_data("LoRa", [6, 60, 120, 180, 240], [0.037, 0.072666667, 0.301, 0.35183, 0.471333333])
+    plot1.set_data("CSS-APCMA", [5, 60, 120, 180, 240], [0, 0.002358137, 0.031500454, 0.058494077, 0.08752398])
+    plot1.set_labels(r'仮想送信台数$N_v$', "PER")
+    plot1.markers = ["o", "x"]
+    plot1.colors = ["tab:orange", "tab:blue"]
+
+    # plot1 = PlotData("bw250k_sf7_tp")
+    # plot1.set_data("LoRa", [6, 60, 120, 180, 240], [0.713, 0.706910961, 0.695853423, 0.562391514, 0.557248473])
+    # plot1.set_data("CSS-APCMA", [6, 60, 120, 180, 240], [0.596146031, 0.60094575, 0.598550265, 0.576737425, 0.567821135])
+    # plot1.set_labels(r'仮想送信台数$N_v$', "Throughput per Device[bps]")
+    # plot1.markers = ["o", "x"]
+    # plot1.colors = ["tab:orange", "tab:blue"]
+    #
+    # plot1 = PlotData("bw250k_sf7_per")
+    # plot1.set_data("LoRa", [6, 60, 120, 180, 240], [0.072, 0.083666667, 0.098, 0.271, 0.277666667])
+    # plot1.set_data("CSS-APCMA", [6, 60, 120, 180, 240], [0.013736006, 0.005795351, 0.009758442, 0.045845604, 0.060596714])
+    # plot1.set_labels(r'仮想送信台数$N_v$', "PER")
+    # plot1.markers = ["o", "x"]
+    # plot1.colors = ["tab:orange", "tab:blue"]
